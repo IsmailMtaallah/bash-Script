@@ -1,4 +1,8 @@
 #!/bin/bash
+
+
+
+#Download samba source from git repo
 if mkdir ~/installSamba; cd ~/installSamba; then
 	echo "creation of install directory done"
 else
@@ -16,6 +20,8 @@ if cd samba ; then
 else 
     echo "I can't find samba4 project"
 fi
+
+#Configure, compile and install samba from source
 
 if ./configure --enable-debug --enable-selftest;  then
     echo "the configuration done"
